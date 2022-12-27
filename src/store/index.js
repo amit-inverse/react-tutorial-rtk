@@ -6,6 +6,7 @@ const songsSlice = createSlice({
     reducers: {
         // 'song' + '/' + 'addSong' = 'song/addSong'
         addSong(state, action) {
+            console.log(state.length);
             // STATE IS NOT THE BIG STATE OBJECT
             // IN THE STORE
             // IT IS THE PIECE OF STATE MANAGED
