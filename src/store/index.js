@@ -12,6 +12,7 @@ const moviesSlice = createSlice({
             state.splice(index, 1);
         },
         reset(state, action) {
+            // console.log(action);
             return [];
         },
     },
@@ -29,6 +30,11 @@ const songsSlice = createSlice({
             const index = state.indexOf(action.payload);
             state.splice(index, 1);
         },
+    },
+    extraReducers(builder) {
+        builder.addCase('movie/reset', (state, action) => {
+            return [];
+        });
     },
 });
 
